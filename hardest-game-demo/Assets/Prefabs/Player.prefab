@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4542058403503397140}
   - component: {fileID: 4904403282286829081}
   - component: {fileID: 5810437546149327895}
+  - component: {fileID: 9125640442553574919}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -210,3 +211,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9125640442553574919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196184927322870256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4857287b711582245899135512334e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
