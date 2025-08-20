@@ -7,7 +7,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene("StartScene");
+            SceneUtils.RestartCurrentScene();
         }
     }
 }

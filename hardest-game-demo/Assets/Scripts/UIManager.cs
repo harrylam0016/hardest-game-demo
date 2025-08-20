@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneUtils.LoadSceneSafe(SceneNames.LEVEL_1);
     }
 
     public void QuitGame()
