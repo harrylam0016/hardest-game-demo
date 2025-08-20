@@ -29,6 +29,11 @@ public class PlayerCollision : MonoBehaviour
             playerMovement.DisableMovement();
         }
 
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayHitEnemySFX();
+        }
+
         StartCoroutine(DeathEffect());
 
         StartCoroutine(RestartAfterDelay());

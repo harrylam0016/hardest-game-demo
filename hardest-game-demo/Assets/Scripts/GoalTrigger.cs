@@ -22,6 +22,11 @@ public class GoalTrigger : MonoBehaviour
                 playerMovement.DisableMovement();
             }
 
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayWinGoalSFX();
+            }
+
             StartCoroutine(LoadNextAfterDelay());
         }
     }
