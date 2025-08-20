@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Vector2 move;
 
+    private bool canMove = true;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -14,11 +16,43 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        move = value.Get<Vector2>();
+        if (canMove)
+        {
+            move = value.Get<Vector2>();
+        }
+        else
+        {
+            move = Vector2.zero;
+        }
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = move.normalized * moveSpeed;
+        if (canMove)
+        {
+            rb.linearVelocity = move.normalized * moveSpeed;
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+    }
+
+    public void EnableMovement()
+    {
+        canMove = true;
+    }
+
+    public void DisableMovement()
+    {
+        canMove = false;
+        move = Vector2.zero;
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+    }
+
+    void Start()
+    {
+        canMove = true;
     }
 }
