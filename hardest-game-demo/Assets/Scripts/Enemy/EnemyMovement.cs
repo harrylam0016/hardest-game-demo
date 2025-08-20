@@ -4,7 +4,8 @@ public class EnemyMovement : MonoBehaviour
 {
     public enum MoveType
     {
-        PingPong
+        PingPong,
+        Circular
     }
 
     [Header("General Settings")]
@@ -15,6 +16,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] Transform pointA;
     [SerializeField] Transform pointB;
     private Vector3 target;
+
+    [Header("Circular Settings")]
+    [SerializeField] Transform center;
+    [SerializeField] float radius = 2f;
+    private float angle;
 
     void Start()
     {
@@ -29,6 +35,10 @@ public class EnemyMovement : MonoBehaviour
             case MoveType.PingPong:
                 MovePingPong();
                 break;
+
+            case MoveType.Circular:
+                MoveCircular();
+                break;
         }
     }
 
@@ -42,5 +52,15 @@ public class EnemyMovement : MonoBehaviour
         {
             target = (target == pointA.position) ? pointB.position : pointA.position;
         }
+    }
+
+    private void MoveCircular()
+    {
+        if (center == null) return;
+
+        angle += moveSpeed * Time.deltaTime;
+        float x = Mathf.Cos(angle) * radius;
+        float y = Mathf.Sin(angle) * radius;
+        transform.position = center.position + new Vector3(x, y, 0f);
     }
 }
