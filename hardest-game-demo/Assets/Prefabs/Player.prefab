@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5810437546149327895}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 6
-  raycastDistance: 0.1
 --- !u!50 &4542058403503397140
 Rigidbody2D:
   serializedVersion: 5
