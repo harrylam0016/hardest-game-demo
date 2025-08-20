@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3509977417490202285}
   - component: {fileID: 6891386938438432771}
   - component: {fileID: 4179433593244815772}
+  - component: {fileID: 7861021759254958484}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3135879456784220327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0.02763, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -127,3 +128,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.0000009536743}
   m_Radius: 0.5
+--- !u!114 &7861021759254958484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135879456784220327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e52c89cb75cbd41b41abb54f4ec310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  moveType: 0
+  moveSpeed: 3
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
